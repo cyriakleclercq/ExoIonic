@@ -1,0 +1,13 @@
+<p>
+  chat works!
+</p>
+
+<ion-header> </ion-header>
+
+<ion-content>
+  <ion-item *ngIf="chat">
+    <ion-img [src]="chat.url"></ion-img>
+  </ion-item>
+
+  <ion-button (click)="getChat()"> press </ion-button>
+</ion-content>

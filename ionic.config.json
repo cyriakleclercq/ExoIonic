@@ -1,5 +1,7 @@
 {
   "name": "m2i",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
