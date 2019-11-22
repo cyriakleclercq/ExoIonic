@@ -1,0 +1,42 @@
+<ion-app>
+
+  <ion-header>
+
+    <ion-toolbar>
+      <ion-buttons>
+        <ion-menu-toggle>
+          <ion-icon name="menu">
+
+          </ion-icon>
+        </ion-menu-toggle>
+      </ion-buttons>
+    </ion-toolbar>
+
+  </ion-header>
+
+
+  <ion-content>
+    <ion-menu contentId="content" type="push">
+
+      <ion-list>
+        <ion-item [routerLink]="['']">
+          4 bindings
+        </ion-item>
+
+        <ion-item [routerLink]="['carroussel']">
+          photos
+        </ion-item>
+
+        <ion-item>
+          CHATONS
+        </ion-item>
+
+      </ion-list>
+    </ion-menu>
+
+    <ion-router-outlet id="content"></ion-router-outlet>
+
+  </ion-content>
+
+
+</ion-app>

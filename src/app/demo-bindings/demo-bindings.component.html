@@ -1,0 +1,50 @@
+<ion-content>
+  <ion-item>
+    <h1> Les 4 bindings angular </h1>
+  </ion-item>
+
+  <ion-item>
+    <!-- one way binding + eventBinding -->
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+      <ion-item>
+        <ion-label for="name"> nom : </ion-label>
+        <ion-input type="text" name="name" formControlName="name"> </ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!this.form.controls.name.valid && this.form.controls.name.dirty">
+        <ion-item color="danger" *ngIf="this.form.controls.name.errors.required"> champ requis </ion-item>
+      </ion-item>
+
+      <ion-item>
+        <ion-label for="name"> age : </ion-label>
+        <ion-input type="number" name="age" formControlName="age"> </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label for="name"> password : </ion-label>
+        <ion-input type="password" name="password" formControlName="password"> </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-button type="submit"> valider </ion-button>
+
+      </ion-item>
+
+    </form>
+  </ion-item>
+
+  <ion-item>
+
+    <!-- two way binding -->
+    <ion-input type="text" [(ngModel)]="bateau"> </ion-input>
+  </ion-item>
+
+
+
+  <ion-item>
+
+    <!-- interpolation -->
+    <p> {{ bateau }}</p>
+  </ion-item>
+</ion-content>
